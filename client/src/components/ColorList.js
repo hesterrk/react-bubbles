@@ -80,7 +80,7 @@ const ColorList = ({ colors, updateColors }) => {
         name="color"
         placeholder="Enter color"
         value={colorAdd.color}
-        onChange={ e => setColorAdd({...colorAdd,[e.target.name]: e.target.value})
+        onChange={ e => setColorAdd({...colorAdd, color: e.target.value})
       }
         />
         <input
