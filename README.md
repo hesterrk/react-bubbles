@@ -27,9 +27,21 @@ In this project you will create a login page and request a token from the server
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain what a token is used for.
+-Servers issue tokens (which we store on our client) and in exchange, require that our apps provide proof that its authenticated with them. We do this by giving correct login credentials. When a user successfully logins in the server receives a ‘header’ object, payload (data) object (contains users details- username, password), a ‘verify signature’ function, and combines all of these to encode a token. This token is returned to the client.
+
 - [ ] What steps can you take in your web apps to keep your data secure?
+-Using Protected Routes and axiosWithAuth.
+-Protected routes will only render with authentication, which means content is not displayed until you are logged in. The client will make a login request, sending the server the user’s username and password. The server will check those credentials against the database, if it can authenticate the user, it will return a token. 
+-axiosWithAuth is an authenticated instance of axios we can create. This means our endpoints we want protected can be used with this instance. It does this by having an 'authorisation: token' on its header to any requests we use with this instance. Meaning the exchange of data only occurs if we have the correct user details in localStorage. 
+
 - [ ] Describe how web servers work.
+-They are computer programs connected to internet that show websites when they are requested using the web client. These programs are run on servers. Web servers show the webpage to your browser (client) when requested by the client.
+
 - [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+ -GET request: retrieving data 
+ -POST request: sending data 
+ -PUT request: sending our data to be updated on the somewhere 
+ -DELETE request: delete data 
 
 
 ## Project Set Up
