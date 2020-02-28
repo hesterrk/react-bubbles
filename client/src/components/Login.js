@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from 'axios'
 import { useHistory } from "react-router-dom";
+import './Bubbles.css';
 
 const Login = () => {
   // make a post request to retrieve a token from the api
@@ -35,10 +36,12 @@ const login = e => {
 
   return (
     <>
+    <div className="header">
       <h1>Welcome to the Bubble App- Log in Here!</h1>
-    <div>
+    <div className="loginContainer">
+      </div>
 
-    <form onSubmit={login}>
+    <form className="formContainer" onSubmit={login}>
              <input
                 type="text"
                 name="username"

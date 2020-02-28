@@ -20,6 +20,7 @@ const ColorList = ({ colors, updateColors }) => {
   const history = useHistory();
 
 
+  //stretch add color 
 
 
   const editColor = color => {
